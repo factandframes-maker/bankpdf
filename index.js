@@ -69,7 +69,7 @@ app.post('/analyze', upload.single('file'), async (req,res)=>{
       const data=xlsx.utils.sheet_to_json(sheet,{header:1});
       text=data.map(r=>r.join(', ')).join('\n');
     }
-    const model=genAI.getGenerativeModel({model:'gemini-1.5-flash'});
+    const model=genAI.getGenerativeModel({model:'gemini-2.0-flash'});
     const prompt=`You are a financial analyst. Analyze this Indian bank statement and return ONLY a JSON object with no extra text:
 {
   "totalCredits": "total money coming in with rupee symbol",
