@@ -5,7 +5,7 @@ const { GoogleGenerativeAI } = require('@google/generative-ai');
 
 const app = express();
 const upload = multer({ storage: multer.memoryStorage() });
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_KEY);
+const genAI = new GoogleGenerativeAI(process.env.AIzaSyDiMb8UEwhnkDD8uOS1U3rmGmsDqpl9qU0);
 app.use(express.json());
 
 const usage = {};
